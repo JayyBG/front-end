@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welkom bij de Hip-Hop Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="welcome-container">
+    <h1>Welkom bij de Hip-Hop Quiz!</h1>
+    <p>Test je kennis van hip-hop albumcovers.</p>
+    
+    <div id="usernameDisplay"></div> <!-- Display username here -->
+    <div class="quiz-options">
+      <button onclick="window.location.href='hiphop.html'">HipHop</button>
+      <button onclick="window.location.href='pop.html'">Pop</button>
+      <button onclick="window.location.href='rnb.html'">R&B</button>
+    </div>
+  </div>
+
+  <script>
+    // Retrieve username from localStorage
+    const username = localStorage.getItem('username');
+
+    // Display username
+    if (username) {
+      document.getElementById('usernameDisplay').innerHTML = `<p>Gebruikersnaam: ${username}</p>`;
+    }
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
